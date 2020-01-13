@@ -9,17 +9,18 @@
 /* Begin PBXBuildFile section */
 		FE79D9B023CC63D70039DA7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE79D9AF23CC63D70039DA7A /* AppDelegate.swift */; };
 		FE79D9B223CC63D70039DA7A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE79D9B123CC63D70039DA7A /* SceneDelegate.swift */; };
-		FE79D9B423CC63D70039DA7A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE79D9B323CC63D70039DA7A /* ViewController.swift */; };
+		FE79D9B423CC63D70039DA7A /* MapScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE79D9B323CC63D70039DA7A /* MapScreen.swift */; };
 		FE79D9B723CC63D70039DA7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE79D9B523CC63D70039DA7A /* Main.storyboard */; };
 		FE79D9B923CC63D70039DA7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE79D9B823CC63D70039DA7A /* Assets.xcassets */; };
 		FE79D9BC23CC63D70039DA7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE79D9BA23CC63D70039DA7A /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FE0628A723CD1FFA0013C9EC /* Paris-France.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = "Paris-France.gpx"; path = "../../../Paris-France.gpx"; sourceTree = "<group>"; };
 		FE79D9AC23CC63D70039DA7A /* DooWap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DooWap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE79D9AF23CC63D70039DA7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE79D9B123CC63D70039DA7A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FE79D9B323CC63D70039DA7A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FE79D9B323CC63D70039DA7A /* MapScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreen.swift; sourceTree = "<group>"; };
 		FE79D9B623CC63D70039DA7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FE79D9B823CC63D70039DA7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE79D9BB23CC63D70039DA7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -40,6 +41,7 @@
 		FE79D9A323CC63D70039DA7A = {
 			isa = PBXGroup;
 			children = (
+				FE0628A723CD1FFA0013C9EC /* Paris-France.gpx */,
 				FE79D9AE23CC63D70039DA7A /* DooWap */,
 				FE79D9AD23CC63D70039DA7A /* Products */,
 			);
@@ -58,7 +60,7 @@
 			children = (
 				FE79D9AF23CC63D70039DA7A /* AppDelegate.swift */,
 				FE79D9B123CC63D70039DA7A /* SceneDelegate.swift */,
-				FE79D9B323CC63D70039DA7A /* ViewController.swift */,
+				FE79D9B323CC63D70039DA7A /* MapScreen.swift */,
 				FE79D9B523CC63D70039DA7A /* Main.storyboard */,
 				FE79D9B823CC63D70039DA7A /* Assets.xcassets */,
 				FE79D9BA23CC63D70039DA7A /* LaunchScreen.storyboard */,
@@ -138,7 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE79D9B423CC63D70039DA7A /* ViewController.swift in Sources */,
+				FE79D9B423CC63D70039DA7A /* MapScreen.swift in Sources */,
 				FE79D9B023CC63D70039DA7A /* AppDelegate.swift in Sources */,
 				FE79D9B223CC63D70039DA7A /* SceneDelegate.swift in Sources */,
 			);
