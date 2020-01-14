@@ -18,13 +18,6 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5QI-7h-W7p">
                                 <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                             </mapView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pin" translatesAutoresizingMaskIntoConstraints="NO" id="HAA-pi-kI9">
-                                <rect key="frame" x="167.66666666666666" y="366" width="40" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="eC3-5y-9hc"/>
-                                    <constraint firstAttribute="width" constant="40" id="rhw-Ck-AUz"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1d-Qe-9EY">
                                 <rect key="frame" x="0.0" y="728" width="375" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -38,8 +31,6 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="HAA-pi-kI9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="59R-MT-l8l"/>
-                            <constraint firstItem="HAA-pi-kI9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-20" id="MvS-jE-fRs"/>
                             <constraint firstItem="5QI-7h-W7p" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Q4y-vN-ZtU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="a1d-Qe-9EY" secondAttribute="bottom" id="Qr3-3n-XWb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5QI-7h-W7p" secondAttribute="trailing" id="aww-Eh-fsN"/>
@@ -60,7 +51,4 @@
             <point key="canvasLocation" x="138.40000000000001" y="137.4384236453202"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Pin" width="170.66667175292969" height="170.66667175292969"/>
-    </resources>
 </document>

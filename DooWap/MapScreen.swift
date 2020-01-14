@@ -17,7 +17,7 @@ class MapScreen: UIViewController {
     @IBOutlet weak var addressLabel: UILabel!
     
     let locationManager = CLLocationManager()
-    let regionInMeters: Double = 1000
+    let regionInMeters: Double = 10000
     var previousLocation: CLLocation?
     
     override func viewDidLoad() {
@@ -81,6 +81,15 @@ class MapScreen: UIViewController {
             
             return CLLocation(latitude: latitude, longitude: longitude)
     }
+    
+    func addAnnotations() {
+        let coitTowerAnnotation = MKPointAnnotation()
+        coitTowerAnnotation.title = "Coit Tower"
+        coitTowerAnnotation.coordinate = CLLocationCoordinate2D(latitude: 37.8023 , longitude: -122.4058)
+        
+        mapView.addAnnotation(coitTowerAnnotation)
+    }
+    
  
 }
 
@@ -93,42 +102,10 @@ extension MapScreen: CLLocationManagerDelegate {
          let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
          let region = MKCoordinateRegion.init(center: center, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
          mapView.setRegion(region, animated: true)
+        addAnnotations()
      }
  
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         checkLocationAuthorization()
-    }
-}
-
-
-extension MapScreen: MKMapViewDelegate {
-    func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
-        let center = getCenterLocation(for: mapView)
-        let geoCoder = CLGeocoder()
-        
-        guard let previousLocation = self.previousLocation else { return }
-        
-        guard center.distance(from: previousLocation) > 50 else { return }
-        self.previousLocation = center
-        
-        geoCoder.reverseGeocodeLocation(center) { [weak self] (placemarks, error) in
-            guard let self = self else { return }
-            if let _ = error {
-                //TODO:
-                return
-            }
-            
-            guard let placemark = placemarks?.first else {
-                //TODO
-                return
-            }
-            
-            let streetNumber = placemark.subThoroughfare ?? ""
-            let streetName = placemark.thoroughfare ?? "" 
-            
-            DispatchQueue.main.async {
-                self.addressLabel.text = "\(streetNumber) \(streetName)"
-            }
-        }
     }
 }
