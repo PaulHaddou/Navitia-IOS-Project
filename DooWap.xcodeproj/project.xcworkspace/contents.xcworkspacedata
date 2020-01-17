@@ -2,6 +2,15 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/paulhaddou/Desktop/Hacker_Man/iOS/DooWap/Navitia-IOS-Project/DooWap/ViewController.swift">
+   </FileRef>
+   <FileRef
+      location = "group:../SelectBarathon.swift">
+   </FileRef>
+   <FileRef
+      location = "group:../../../../../../Downloads/Roshida Valentines.ttf">
+   </FileRef>
+   <FileRef
       location = "self:DooWap.xcodeproj">
    </FileRef>
 </Workspace>

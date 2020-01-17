@@ -10,19 +10,64 @@ import UIKit
 import MapKit
 import CoreLocation
 
+
 class MapScreen: UIViewController {
     
+    ///
+    /// Add Bars
+    
+    
+    //Coordinates of the bars
+    let bar1Latitude = 48.845969
+    let bar1Longitude = 2.343564
+    let bar2Latitude = 48.8498571
+    let bar2Longitude = 2.3549651
+    let bar3Latitude = 48.8332913
+    let bar3Longitude = 2.3338394
+
+    
+    //Buttons to add bars
+    
+    
+    func addAnnotations() {
+        let theoBarAnnotation = MKPointAnnotation()
+        theoBarAnnotation.title = "Théo Bar"
+        theoBarAnnotation.coordinate = CLLocationCoordinate2D(latitude: bar1Latitude , longitude: bar1Longitude)
+            
+
+        mapView.addAnnotation(theoBarAnnotation)
+        
+        let emmaBarAnnotation = MKPointAnnotation()
+        emmaBarAnnotation.title = "Emma Bar"
+        emmaBarAnnotation.coordinate = CLLocationCoordinate2D(latitude: bar2Latitude , longitude: bar2Longitude)
+            
+
+        mapView.addAnnotation(emmaBarAnnotation)
+        
+        let paulBarAnnotation = MKPointAnnotation()
+        paulBarAnnotation.title = "Paul's Bar"
+        paulBarAnnotation.coordinate = CLLocationCoordinate2D(latitude: bar3Latitude , longitude: bar3Longitude)
+            
+
+        mapView.addAnnotation(paulBarAnnotation)
+    }
+    
+    
+
+    
+    
+    ///
     
     @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var addressLabel: UILabel!
-    
     let locationManager = CLLocationManager()
-    let regionInMeters: Double = 10000
-    var previousLocation: CLLocation?
+    let regionInMeters: Double = 1500
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         checkLocationServices()
+        addAnnotations()
+        
     }
     
     func setupLocationManager() {
@@ -72,7 +117,6 @@ class MapScreen: UIViewController {
         mapView.showsUserLocation = true
         centerViewOnUserLocation()
         locationManager.startUpdatingLocation()
-        previousLocation = getCenterLocation(for: mapView)
     }
         
     func getCenterLocation(for mapView: MKMapView) -> CLLocation {
@@ -81,16 +125,6 @@ class MapScreen: UIViewController {
             
             return CLLocation(latitude: latitude, longitude: longitude)
     }
-    
-    func addAnnotations() {
-        let coitTowerAnnotation = MKPointAnnotation()
-        coitTowerAnnotation.title = "Coit Tower"
-        coitTowerAnnotation.coordinate = CLLocationCoordinate2D(latitude: 37.8023 , longitude: -122.4058)
-        
-        mapView.addAnnotation(coitTowerAnnotation)
-    }
-    
- 
 }
 
 
@@ -102,10 +136,19 @@ extension MapScreen: CLLocationManagerDelegate {
          let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
          let region = MKCoordinateRegion.init(center: center, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
          mapView.setRegion(region, animated: true)
-        addAnnotations()
      }
  
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         checkLocationAuthorization()
     }
+    
+    func mapView (_ apView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        let renderer = MKPolylineRenderer(overlay: overlay as! MKPolyline)
+        renderer.strokeColor = .green
+        
+        return renderer
+    }
 }
+
+
+

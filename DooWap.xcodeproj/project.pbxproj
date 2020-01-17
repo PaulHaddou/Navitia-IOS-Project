@@ -3,11 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B7F788776E91AB223A7A6D8C /* Pods_DooWap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E11D212402995748F5C9BAC /* Pods_DooWap.framework */; };
 		FE0628A923CD241F0013C9EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE0628A823CD241F0013C9EC /* Assets.xcassets */; };
+		FE198DF723D08A840015C8E2 /* AlamoFire.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE198DF623D08A840015C8E2 /* AlamoFire.swift */; };
 		FE79D9B023CC63D70039DA7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE79D9AF23CC63D70039DA7A /* AppDelegate.swift */; };
 		FE79D9B223CC63D70039DA7A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE79D9B123CC63D70039DA7A /* SceneDelegate.swift */; };
 		FE79D9B423CC63D70039DA7A /* MapScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE79D9B323CC63D70039DA7A /* MapScreen.swift */; };
@@ -15,9 +17,26 @@
 		FE79D9BC23CC63D70039DA7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE79D9BA23CC63D70039DA7A /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		FE198DFB23D08AE20015C8E2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		2E11D212402995748F5C9BAC /* Pods_DooWap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DooWap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D3611AB65E5478F9E73A98A /* Pods-DooWap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DooWap.release.xcconfig"; path = "Target Support Files/Pods-DooWap/Pods-DooWap.release.xcconfig"; sourceTree = "<group>"; };
+		B550BA3A3F319BEDF06038AC /* Pods-DooWap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DooWap.debug.xcconfig"; path = "Target Support Files/Pods-DooWap/Pods-DooWap.debug.xcconfig"; sourceTree = "<group>"; };
 		FE0628A723CD1FFA0013C9EC /* Paris-France.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = "Paris-France.gpx"; path = "../../../Paris-France.gpx"; sourceTree = "<group>"; };
 		FE0628A823CD241F0013C9EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FE198DF623D08A840015C8E2 /* AlamoFire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamoFire.swift; sourceTree = "<group>"; };
 		FE79D9AC23CC63D70039DA7A /* DooWap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DooWap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE79D9AF23CC63D70039DA7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE79D9B123CC63D70039DA7A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,18 +51,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7F788776E91AB223A7A6D8C /* Pods_DooWap.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F5A24E08AA39F3A90D76CEA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B550BA3A3F319BEDF06038AC /* Pods-DooWap.debug.xcconfig */,
+				3D3611AB65E5478F9E73A98A /* Pods-DooWap.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B58D9BA1AB77D7F7D2F341BF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E11D212402995748F5C9BAC /* Pods_DooWap.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FE79D9A323CC63D70039DA7A = {
 			isa = PBXGroup;
 			children = (
 				FE0628A723CD1FFA0013C9EC /* Paris-France.gpx */,
 				FE79D9AE23CC63D70039DA7A /* DooWap */,
 				FE79D9AD23CC63D70039DA7A /* Products */,
+				2F5A24E08AA39F3A90D76CEA /* Pods */,
+				B58D9BA1AB77D7F7D2F341BF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,6 +100,7 @@
 				FE79D9AF23CC63D70039DA7A /* AppDelegate.swift */,
 				FE79D9B123CC63D70039DA7A /* SceneDelegate.swift */,
 				FE79D9B323CC63D70039DA7A /* MapScreen.swift */,
+				FE198DF623D08A840015C8E2 /* AlamoFire.swift */,
 				FE79D9B523CC63D70039DA7A /* Main.storyboard */,
 				FE0628A823CD241F0013C9EC /* Assets.xcassets */,
 				FE79D9BA23CC63D70039DA7A /* LaunchScreen.storyboard */,
@@ -76,9 +116,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FE79D9C023CC63D70039DA7A /* Build configuration list for PBXNativeTarget "DooWap" */;
 			buildPhases = (
+				60D9874E3C4DAF5F6CE89ECE /* [CP] Check Pods Manifest.lock */,
 				FE79D9A823CC63D70039DA7A /* Sources */,
 				FE79D9A923CC63D70039DA7A /* Frameworks */,
 				FE79D9AA23CC63D70039DA7A /* Resources */,
+				1A47AD3D7F0DD40FCA5207EE /* [CP] Embed Pods Frameworks */,
+				FE198DFB23D08AE20015C8E2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -135,11 +178,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1A47AD3D7F0DD40FCA5207EE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DooWap/Pods-DooWap-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DooWap/Pods-DooWap-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DooWap/Pods-DooWap-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		60D9874E3C4DAF5F6CE89ECE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DooWap-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FE79D9A823CC63D70039DA7A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE198DF723D08A840015C8E2 /* AlamoFire.swift in Sources */,
 				FE79D9B423CC63D70039DA7A /* MapScreen.swift in Sources */,
 				FE79D9B023CC63D70039DA7A /* AppDelegate.swift in Sources */,
 				FE79D9B223CC63D70039DA7A /* SceneDelegate.swift in Sources */,
@@ -284,6 +370,7 @@
 		};
 		FE79D9C123CC63D70039DA7A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B550BA3A3F319BEDF06038AC /* Pods-DooWap.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -301,6 +388,7 @@
 		};
 		FE79D9C223CC63D70039DA7A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D3611AB65E5478F9E73A98A /* Pods-DooWap.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
